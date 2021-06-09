@@ -4,7 +4,7 @@ include __DIR__ . "/data/db.php";
 
 $authors = [];
 $genres = [];
-$albums = empty($_GET['genre']) || $_GET['genre'] === 'all' ||  empty($_GET['author']) || $_GET['author'] === 'all'? $database : [];
+$albums = (empty($_GET['genre']) || $_GET['genre'] === 'all') && (empty($_GET['author']) || $_GET['author'] === 'all') ? $database : [];
 
 
 
@@ -24,21 +24,34 @@ foreach($database as $album){
 if(count($albums) === 0){
 
   foreach($database as $album){
-    if($album['genre'] === $_GET['genre'] &&  $album['author'] === $_GET['author']){
+
+    if($album['author'] === $_GET['author'] && (empty($_GET['genre']) || $_GET['genre'] === 'all')){
+      $albums[] = $album;
+    }
+    
+    if($album['genre'] === $_GET['genre'] && (empty($_GET['author']) || $_GET['author'] === 'all')){
+      $albums[] = $album;
+    }
+    
+    if($album['genre'] === $_GET['genre'] && $album['author'] === $_GET['author']){
       $albums[] = $album;
     }
   }
 
 }
 
+//devo fare un doppio filtro 
+// 3 if 
+// se ho il genere e non ho l'autore(vuoto) allora cerca la corrispondenza tra genere
+// se ho l'autore e non ho il genere(vuoto) cerco la corrispondenza per l'autore
+// se nex deu due è empty allora fappcio il push se genre===genere && auotr===autore
+//in tre filtri separati 
 
 $response = [
   'albums' => $albums,
   'genres' => $genres,
   'authors' => $authors
 ];
-
-
 
 header('Content-Type: application/json');
 

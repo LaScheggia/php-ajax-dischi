@@ -31,7 +31,7 @@ const app = new Vue({
   },
   created(){
     this.getAPI();
-    console.log('dioporco')
+    console.log('')
   }
 
 });
