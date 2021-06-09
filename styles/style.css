@@ -11,26 +11,29 @@ header{
 }
 
 header img{
-    width: 50px;
+  width: 50px;
 }
 
 .disc{
   flex-basis: calc(100% / 5);
   min-height: 400px;
-  
-  
 }
+
 .disc div{
-    background-color: #2E3A46;
-    height: 100%;
+  background-color: #2E3A46;
+  height: 100%;
+}
+
+.disc img{
+  height: 200px;
 }
 
 .disc h5{
-    color: #7D7977;
+  color: #7D7977;
 }
 
 .disc h3{
-    font-size: 1rem;
+  font-size: 1rem;
 }
 
 

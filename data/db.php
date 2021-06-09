@@ -48,6 +48,38 @@
           'year' => 1998,
           'poster' => 'https://images-na.ssl-images-amazon.com/images/I/71fkviQiIKL._AC_SL1087_.jpg'
       ],
+      [
+          'title' => 'La genesi del tuo colore',
+          'author' => 'Irama',
+          'album' => 'La genesi del tuo colore',
+          'genre' => 'Dance',
+          'year' => 2021,
+          'poster' => 'https://i1.sndcdn.com/artworks-w5NakIJph5rZl6pr-troYLQ-t500x500.jpg'
+      ],
+      [
+          'title' => 'Ice Cream',
+          'author' => 'BLACKPINK',
+          'album' => 'THE ALBUM',
+          'genre' => 'Kpop',
+          'year' => 2020,
+          'poster' => 'https://m.media-amazon.com/images/I/81HsEr1r0nL._SS500_.jpg'
+      ],
+      [
+          'title' => 'Arrest me',
+          'author' => 'Kaze',
+          'album' => 'Arrest me',
+          'genre' => 'EDM',
+          'year' => 2020,
+          'poster' => 'https://m.media-amazon.com/images/I/911MmK-4OkL._SS500_.jpg'
+      ],
+      [
+          'title' => 'Lovesick girls',
+          'author' => 'BLACKPINK',
+          'album' => 'BLACKPINK',
+          'genre' => 'Kpop',
+          'year' => 2020,
+          'poster' => 'https://www.earone.it/newsimages/blackpink_lovesick_girls.jpg___th_320_0.jpg'
+      ],
   ];
 
   function stripslashes_deep($value)

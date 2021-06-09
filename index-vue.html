@@ -31,12 +31,21 @@
           :value="genre">{{ genre }}</option>
         </select>
       </div>
+      <div>
+        <select
+          @change="getAPI"
+          v-model= "authorToSearch"
+          class="form-select mt-3">
+          <option value="all">Seleziona un autore</option>
+          <option
+          v-for="author in authors"
+          :value="author">{{ author }}</option>
+        </select>
+      </div>
     </header>
 
   <main class="container mt-5">
     <div class="d-flex flex-wrap">
-
-
      <div 
       v-for="album in albums"
       class="disc p-3 text-center">
