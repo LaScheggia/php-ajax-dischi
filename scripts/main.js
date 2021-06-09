@@ -22,6 +22,19 @@ const app = new Vue({
         this.albums = res.data.albums;
         this.genres = res.data.genres;
         this.authors = res.data.authors;
+
+        if (this.albums.length === 0){
+          this.albums.push(
+            {
+              'title' : 'No song',
+              'poster' : 'https://i.pinimg.com/236x/fc/7e/ce/fc7ece8e8ee1f5db97577a4622f33975--photo-icon-sad.jpg',
+              'author' : 'No Author'
+            }
+          )
+        }
+
+
+
         console.log(this.genres);
         console.log(this.albums);
       }).catch(err => {
@@ -32,6 +45,9 @@ const app = new Vue({
   created(){
     this.getAPI();
     console.log('')
+  },
+  mounted(){
+
   }
 
 });

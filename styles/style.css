@@ -16,7 +16,7 @@ header img{
 
 .disc{
   flex-basis: calc(100% / 5);
-  min-height: 400px;
+  min-height: 300px;
 }
 
 .disc div{
